@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'
 import NewsletterBox from '../components/NewsletterBox'
+import Titleee from '../components/Titleee'
 
 const About = () => {
   return (
@@ -20,7 +21,7 @@ const About = () => {
         </div>
       </div>
       <div className='text-4xl py-4'>
-        <Title text1={"KOI HUMSE"} text2={"PYAR KYU KARE ?"} />
+        <Titleee text1={'KOI HUMSE'} text2={`'PYAR'`} text3={' KYU KARE ?'}/>
       </div>
       <div className='flex flex-col md:flex-row mb-20'>
         <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
