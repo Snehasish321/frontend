@@ -15,7 +15,7 @@ const Hero = () => {
           </div>
           <h1 className='prata-regular text-3xl sm:py-3 lg:text-5xl leading-relaxed'>Latest Arrivals</h1>
           <div className='flex items-center gap-2'>
-            <p className='font-semibold text-sm md:text-base '>Abhi Shopping karo bench*d</p>
+            <p className='font-semibold text-sm md:text-base '>Abhi Shopping kijiye dosto</p>
             <p className='w-8 md:w-11 h-[1px] bg-[#414141]'></p>
           </div>
         </div>
