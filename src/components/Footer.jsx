@@ -29,6 +29,14 @@ const Footer = () => {
         <ul className="flex flex-col gap-1 text-gray-600">
           <li><a href="tel:+918942837703" className="hover:text-gray-900">+91-8942837703</a></li>
           <li><a href="mailto:thetouchables078@gmail.com" className="hover:text-gray-900">thetouchables078@gmail.com</a></li>
+          <li>
+            <a 
+              href="https://linktr.ee/developerr" 
+              className="hover:text-gray-900 transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
+            >
+              Follow the developers
+            </a>
+          </li>
         </ul>
       </section>
       
@@ -37,6 +45,7 @@ const Footer = () => {
         <hr className="border-gray-300" />
         <p className="py-5 text-center text-gray-600">
           Copyright {new Date().getFullYear()} @ touchables.com - All Rights Reserved.
+
         </p>
       </div>
     </footer>
