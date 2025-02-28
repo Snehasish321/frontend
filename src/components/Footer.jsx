@@ -32,7 +32,7 @@ const Footer = () => {
           <li>
             <a 
               href="https://linktr.ee/developerr" 
-              className="hover:text-gray-900 transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
+              className="hover:text-gray-900 transition duration-300 ease-in-out transform hover:scale-105 hover:text-red-500"
             >
               Follow the developers
             </a>
