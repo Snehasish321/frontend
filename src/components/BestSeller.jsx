@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
 import ProductItem from './ProductItem'; // Assuming ProductItem is used for rendering product cards.
@@ -9,7 +9,7 @@ const BestSeller = () => {
 
   useEffect(() => {
     if (products && products.length > 0) {
-      const bestProduct = products.filter((item) => item.bestseller);
+      const bestProduct = products.filter((item) => item.bestSeller);
       setBestSeller(bestProduct.slice(0, 5));
     }
   }, [products]); // Include `products` as a dependency.
@@ -23,7 +23,7 @@ const BestSeller = () => {
         </p>
       </div>
       {/* Rendering Best Sellers */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">      
         {bestSeller.map((item, index) => (
           <ProductItem
             key={item._id || index} // Use `item._id` if available, fallback to `index`.
