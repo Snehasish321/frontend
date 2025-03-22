@@ -40,17 +40,17 @@ const Navbar = () => {
         </NavLink>
       </ul>
 
-      {/* Right Section */}
-      <div className="flex items-center gap-6">
+            {/* Right Section */}
+            <div className="flex items-center gap-4 sm:gap-6">
         {/* Search Icon */}
-        <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className="w-5 cursor-pointer" alt="Search" />
+        <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className="w-5 sm:w-6 cursor-pointer" alt="Search" />
 
         {/* Profile Dropdown */}
         <div className="group relative">
-          <img onClick={() => token ? null : navigate('/login')} className="w-5 cursor-pointer" src={assets.profile_icon} alt="Profile" />
+          <img onClick={() => token ? null : navigate('/login')} className="w-5 sm:w-6 cursor-pointer" src={assets.profile_icon} alt="Profile" />
           {/* Dropdown Menu */}
           { token && <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
-            <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-custom-cream text-gray-500 rounded">
+            <div className="flex flex-col gap-2 w-32 sm:w-36 py-3 px-4 sm:px-5 bg-custom-cream text-gray-500 rounded">
               <p className="cursor-pointer hover:text-black">My Profile</p>
               <p onClick={() => navigate('/orders')} className="cursor-pointer hover:text-black">Orders</p>
               <p onClick={logout} className="cursor-pointer hover:text-black">Logout</p>
@@ -60,8 +60,8 @@ const Navbar = () => {
 
         {/* Cart Icon */}
         <Link to="/cart" className="relative">
-          <img src={assets.cart_icon} className="w-5 min-w-5" alt="Cart" />
-          <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[9px]">
+          <img src={assets.cart_icon} className="w-5 sm:w-6 min-w-5" alt="Cart" />
+          <p className="absolute right-[-5px] bottom-[-5px] w-4 sm:w-5 text-center leading-4 bg-black text-white aspect-square rounded-full text-[9px] sm:text-[10px]">
             {getCartCount()}
           </p>
         </Link>
@@ -70,7 +70,7 @@ const Navbar = () => {
         <img
           onClick={() => setVisible(true)}
           src={assets.menu_icon}
-          className="w-5 cursor-pointer sm:hidden"
+          className="w-5 sm:w-6 cursor-pointer sm:hidden"
           alt="Menu"
         />
       </div>
