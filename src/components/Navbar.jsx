@@ -124,11 +124,16 @@ const Navbar = () => {
             CONTACT
           </NavLink>
           <NavLink
-            className="py-2 pl-6 border-b hover:bg-gray-100"
-            onClick={logout}
-          >
-            Log Out
-          </NavLink>
+  className="py-2 pl-6 border-b hover:bg-gray-100"
+  to="/login"
+  onClick={() => {
+    logout();
+    setVisible(false);
+  }}
+>
+  Log Out
+</NavLink>
+
         </div>
       </div>
     </div>
