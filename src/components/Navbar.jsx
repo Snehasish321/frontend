@@ -42,10 +42,8 @@ const Navbar = () => {
 
             {/* Right Section */}
             <div className="flex items-center gap-4 sm:gap-6">
-        {/* Search Icon */}
-        <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className="w-5 sm:w-6 cursor-pointer" alt="Search" />
 
-        {/* Profile Dropdown */}
+            {/* Profile Dropdown */}
         <div className="group relative">
           <img onClick={() => token ? null : navigate('/login')} className="w-5 sm:w-6 cursor-pointer" src={assets.profile_icon} alt="Profile" />
           {/* Dropdown Menu */}
@@ -57,6 +55,11 @@ const Navbar = () => {
             </div>
           </div> }
         </div>
+
+        {/* Search Icon */}
+        <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className="w-5 sm:w-6 cursor-pointer" alt="Search" />
+
+
 
         {/* Cart Icon */}
         <Link to="/cart" className="relative">
@@ -119,6 +122,12 @@ const Navbar = () => {
             onClick={() => setVisible(false)}
           >
             CONTACT
+          </NavLink>
+          <NavLink
+            className="py-2 pl-6 border-b hover:bg-gray-100"
+            onClick={logout}
+          >
+            Log Out
           </NavLink>
         </div>
       </div>
