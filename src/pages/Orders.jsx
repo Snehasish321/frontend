@@ -57,6 +57,7 @@ const Orders = () => {
                     <p>Size : {item.size}</p>
                   </div>
                   <p className='mt-2'>Date: <span className='text-gray-700'>{new Date (item.date).toDateString()}</span></p>
+                  <p className='mt-2'>Payment: <span className='text-gray-700'>{item.paymentMethod}</span></p>
                 </div>
               </div>
               <div className='md:w-1/2 flex justify-between '>
