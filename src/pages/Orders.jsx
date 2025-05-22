@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import Title from '../components/Title';
 import axios from 'axios';
@@ -7,6 +7,36 @@ const Orders = () => {
 
   const { backendUrl, token,   currency } = useContext(ShopContext);
   const [ orderData , setOrderData ] = useState([]);
+
+  const loadOrderData = async () => {
+    try {
+      if (!token) {
+        return null;
+      }
+
+      const response = await axios.post(backendUrl + '/api/order/userorders',{},{headers: {token}})
+      if (response.data.success) {
+        let allOrdersItem = []
+        response.data.orders.map((order)=>{
+          order.items.map((item)=>{
+            item['status'] = order.status
+            item['payment'] = order.payment
+            item['paymentMethod'] = order.paymentMethod
+            item['date'] = order.date
+            allOrdersItem.push(item)
+          })
+        })
+        setOrderData(allOrdersItem.reverse());
+        
+      }
+    } catch (error) {
+      
+    }
+  }
+
+  useEffect(() => {
+    loadOrderData();
+  },[token])
 
   return (
     <div className='border-t'>
