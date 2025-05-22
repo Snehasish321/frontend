@@ -56,7 +56,7 @@ const Orders = () => {
                     <p>Quantity: {item.quantity}</p>
                     <p>Size : {item.size}</p>
                   </div>
-                  <p className='mt-2'>Date: <span className='text-gray-400'>25 July , 2025</span></p>
+                  <p className='mt-2'>Date: <span className='text-gray-700'>{new Date (item.date).toDateString()}</span></p>
                 </div>
               </div>
               <div className='md:w-1/2 flex justify-between '>
