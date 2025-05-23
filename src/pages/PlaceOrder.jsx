@@ -149,11 +149,11 @@ const PlaceOrder = () => {
               <img className='h-5 mx-4' src={assets.razorpay_logo} alt="Razorpay" />
             </div>
 
-            {/* Stripe */}
+            {/* Stripe 
             <div onClick={() => setMethod('stripe')} className={`flex items-center gap-3 border p-2 px-3 cursor-pointer ${method === 'stripe' ? 'border-black' : ''}`}>
               <img className='h-5 mx-4' src={assets.stripe_logo} alt="Stripe" />
             </div>
-
+              */}
             {/* Cash on Delivery */}
             <div onClick={() => setMethod('cod')} className={`flex items-center gap-3 border p-2 px-3 cursor-pointer ${method === 'cod' ? 'border-black' : ''}`}>
               <p className='text-gray-800 text-sm font-medium mx-4'>CASH ON DELIVERY</p>
